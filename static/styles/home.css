@@ -1,0 +1,532 @@
+/* ========================= TOP NAVIGATION ========================= */
+
+.header-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.logo {
+    font-family: var(--primary-font);
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    font-size: 1.4rem;
+    list-style: none;
+}
+
+.nav-links li.active {
+    font-weight: 600;
+}
+
+.nav-links .logo,
+.nav-links button,
+.nav-actions .menu-btn-item {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-navigation {
+        padding: 0 24px;
+    }
+
+    .nav-links {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #e9edef;
+        z-index: 999;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        transform: translateX(-100%);
+    }
+
+    .nav-links .logo {
+        display: block;
+        margin-left: 8px;
+        margin-bottom: 24px;
+    }
+
+    .nav-links button {
+        display: block;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .nav-links button img {
+        width: 20px;
+    }
+
+    .nav-actions .menu-btn-item {
+        display: block;
+    }
+}
+
+.nav-actions {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-actions button {
+    width: 20px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.btn-white {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    color: #000;
+}
+
+.btn-white:hover {
+    background-color: #fff;
+}
+
+/* ========================= MAIN HEADER ========================= */
+
+.header-cover {
+    height: 600px;
+
+    background-color: #000;
+    position: relative;
+}
+
+.header-cover .cover-background {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.cover-background {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.cover-background.fade-out {
+    opacity: 0;
+}
+
+.header-text {
+    padding: 0 clamp(0px, 5vw, 200px);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(
+        to left,
+        hsla(0, 0%, 0%, 0.21) 0%,
+        hsla(0, 0%, 0%, 0.216) 8.1%,
+        hsla(0, 0%, 0%, 0.235) 15.7%,
+        hsla(0, 0%, 0%, 0.263) 22.9%,
+        hsla(0, 0%, 0%, 0.299) 29.7%,
+        hsla(0, 0%, 0%, 0.342) 36.1%,
+        hsla(0, 0%, 0%, 0.39) 42.4%,
+        hsla(0, 0%, 0%, 0.44) 48.5%,
+        hsla(0, 0%, 0%, 0.49) 54.5%,
+        hsla(0, 0%, 0%, 0.54) 60.5%,
+        hsla(0, 0%, 0%, 0.588) 66.5%,
+        hsla(0, 0%, 0%, 0.631) 72.7%,
+        hsla(0, 0%, 0%, 0.667) 79%,
+        hsla(0, 0%, 0%, 0.695) 85.7%,
+        hsla(0, 0%, 0%, 0.714) 92.6%,
+        hsla(0, 0%, 0%, 0.72) 100%
+    );
+}
+
+.header-text h2 {
+    font-family: var(--primary-font);
+    font-size: clamp(4rem, 5vw, 8rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: #f1f1f1;
+    margin-bottom: 48px;
+    letter-spacing: -1px;
+}
+
+.header-text h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #f1f1f1;
+    max-width: 60ch;
+    margin-bottom: 24px;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/* ========================= FEATURED SECTION ========================= */
+
+.featured-categories {
+    padding: 80px 0;
+}
+
+.section-heading {
+    font-size: 2.4rem;
+    font-family: "Poppins";
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 8px;
+}
+
+.categories-grid > div {
+    cursor: pointer;
+}
+
+.category-showcase {
+    height: 360px;
+    position: relative;
+}
+
+.category-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.category-details {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        hsla(0, 0%, 0%, 0.09) 0%,
+        hsla(0, 0%, 0%, 0.1) 11.8%,
+        hsla(0, 0%, 0%, 0.121) 22.3%,
+        hsla(0, 0%, 0%, 0.153) 31.4%,
+        hsla(0, 0%, 0%, 0.193) 39.5%,
+        hsla(0, 0%, 0%, 0.239) 46.6%,
+        hsla(0, 0%, 0%, 0.289) 52.9%,
+        hsla(0, 0%, 0%, 0.342) 58.6%,
+        hsla(0, 0%, 0%, 0.396) 63.8%,
+        hsla(0, 0%, 0%, 0.449) 68.7%,
+        hsla(0, 0%, 0%, 0.499) 73.4%,
+        hsla(0, 0%, 0%, 0.544) 78.1%,
+        hsla(0, 0%, 0%, 0.582) 83%,
+        hsla(0, 0%, 0%, 0.612) 88.1%,
+        hsla(0, 0%, 0%, 0.632) 93.8%,
+        hsla(0, 0%, 0%, 0.64) 100%
+    );
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    padding: 24px;
+}
+
+.category-details h4 {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.card-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 12px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.category-carousel {
+    height: 360px;
+    grid-column: span 2;
+    position: relative;
+}
+
+.carousel-navigators {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    gap: 24px;
+}
+
+.carousel-navigators button {
+    width: 24px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    display: grid;
+    place-items: center;
+    transition: 0.2s all;
+}
+
+.carousel-navigators button img {
+    width: 75%;
+    opacity: 0.4;
+    transition: 0.2s all;
+}
+
+.carousel-navigators button:hover img {
+    opacity: 1;
+}
+
+/* ========================= PRODUCT LISTING SECTION ========================= */
+
+.sale-section {
+    margin-bottom: 80px;
+}
+
+.products-listing {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 8px;
+}
+
+.product-card {
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+.product-details h5 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.product-details p {
+    font-size: 1.6rem;
+}
+
+.product-details p > del {
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    font-size: 1.36rem;
+    margin-left: 4px;
+}
+
+.product-cover {
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 8px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 8px;
+}
+
+.product-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.product-description {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    font-size: 1.36rem;
+    padding: 8px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transform: translateY(calc(100% + 8px)) scale(0.96);
+    transition: transform 0.25s;
+}
+
+.product-card:hover .product-description {
+    transform: translateY(0) scale(1);
+}
+
+/* ========================= FOOTER ========================= */
+
+/* --------------- Newsletter Prompt ---------------- */
+
+.newsletter-prompt {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    gap: 24px;
+}
+
+.newsletter-prompt h4 {
+    font-size: 3.2rem;
+    font-family: "Poppins";
+    margin-bottom: 8px;
+}
+
+.newsletter-prompt p {
+    font-size: 1.6rem;
+    max-width: 60ch;
+}
+
+.newsletter-prompt div:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.newsletter-prompt input {
+    min-width: 320px;
+    height: 48px;
+    padding: 24px;
+    font-size: 1.6rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    transition: border 0.2s ease-out;
+}
+
+.newsletter-prompt input:focus {
+    border-color: #000;
+}
+
+.btn-dark {
+    background-color: rgba(0, 0, 0, 0.87);
+}
+
+.btn-dark:hover {
+    background-color: #000;
+}
+
+/* ----------------------- Footer Links ------------------------ */
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 40px 0;
+    gap: 40px;
+}
+
+.links-column {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.links-column a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.67);
+    font-size: 1.4rem;
+}
+
+.column-title {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.contacts-column address {
+    font-size: 1.4rem;
+    margin-top: 16px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.socials img {
+    width: 24px;
+    opacity: 0.4;
+    transition: all 0.25s;
+}
+
+.socials a:hover img {
+    opacity: 1;
+}
+
+.socials .column-title {
+    margin-right: 12px;
+}
+
+/* --------------------- Brands Logos --------------------- */
+
+.brands-lineup {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-gap: 40px;
+    list-style: none;
+    padding: 24px 0;
+    place-items: center;
+}
+
+.brands-lineup img {
+    width: 80px;
+    opacity: 0.4;
+}
+
+/* ----------------------- Copyright ------------------------ */
+
+.site-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    height: 48px;
+    background-color: #0b254421;
+    font-size: 1.4rem;
+}
+
+.security-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.security-text img {
+    width: 18px;
+}

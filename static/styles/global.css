@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Roboto, Arial, Helvetica, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.36;
+
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+:root {
+    --primary-text-color: rgba(0, 0, 0, 0.87);
+    --primary-font: "Poppins";
+    --secondary-font: "Inter";
+}
+
+a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+.btn {
+    height: 48px;
+    padding: 0 48px;
+
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    font-family: "Poppins";
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    transition: 0.2s all ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: 0px 0.7px 1.2px rgba(0, 0, 0, 0.017),
+        0px 1.6px 2.8px rgba(0, 0, 0, 0.024), 0px 3px 5.3px rgba(0, 0, 0, 0.03),
+        0px 5.4px 9.4px rgba(0, 0, 0, 0.036),
+        0px 10px 17.5px rgba(0, 0, 0, 0.043), 0px 24px 42px rgba(0, 0, 0, 0.06);
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 96%;
+    }
+}

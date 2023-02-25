@@ -1,0 +1,66 @@
+.contact {
+    padding: 80px 0;
+}
+
+.contact header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.contact header h1 {
+    font-family: "Poppins";
+    font-size: clamp(4rem, 5vw, 8rem);
+    font-weight: 600;
+}
+
+.contact header h1:nth-child(2) {
+    font-size: 8rem;
+    font-size: clamp(6rem, 6vw, 10rem);
+}
+
+label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.contact form {
+    max-width: 380px;
+}
+
+.contact form input {
+    margin-bottom: 24px;
+    width: 100%;
+    display: block;
+}
+
+.contact form textarea {
+    height: 160px;
+    margin-bottom: 24px;
+    font-family: "inter";
+    padding: 16px 24px;
+    font-size: 1.55rem;
+    width: 100%;
+    display: block;
+}
+
+input,
+textarea {
+    min-width: 320px;
+    height: 48px;
+    padding: 0 24px;
+    font-size: 1.6rem;
+    outline: none;
+    border: 1px solid rgba(137, 120, 120, 0.3);
+    transition: border 0.2s ease-out;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #000;
+}
