@@ -51,4 +51,4 @@ function crossfade() {
     setTimeout(crossfade, duration);
 }
 
-crossfade();
+requestAnimationFrame(crossfade);
